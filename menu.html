@@ -10,40 +10,148 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body >
-    
+  <body>
+
+    <!-- ============================================================ -->
+    <!-- 1. ВЕРХНЯЯ ПАНЕЛЬ НАВИГАЦИИ (меняется на всех страницах)      -->
+    <!-- ============================================================ -->
     <div class="topbar">
       <div class="wrap nav">
-        <a class="brand" href="index.html"><span class="brand-mark"></span><span>Новый<br>Вектор 2026</span></a>
-        <div class="navlinks"><a class="" href="index.html">Главная</a><a class="" href="today.html">Моё сегодня</a><a class="active" href="menu.html">Меню</a><a class="" href="program.html">Программа</a><a class="" href="materials.html">Материалы</a><a class="" href="team.html">Команда</a><a class="" href="map.html">Карта</a><a class="" href="media.html">Медиа</a><a class="" href="faq.html">FAQ</a></div>
+        <!-- Логотип -->
+        <a class="brand" href="index.html">
+          <span class="brand-mark"></span>
+          <span>Новый<br>Вектор 2026</span>
+        </a>
+
+        <!-- Список страниц – активная помечена классом "active" -->
+        <div class="navlinks">
+          <!-- Чтобы сменить активную страницу, перенесите "active" на нужную ссылку -->
+          <a class=""       href="index.html">Главная</a>
+          <a class=""       href="today.html">Моё сегодня</a>
+          <a class="active" href="menu.html">Меню</a>      <!-- активная сейчас -->
+          <a class=""       href="program.html">Программа</a>
+          <a class=""       href="materials.html">Материалы</a>
+          <a class=""       href="team.html">Команда</a>
+          <a class=""       href="map.html">Карта</a>
+          <a class=""       href="media.html">Медиа</a>
+          <a class=""       href="faq.html">FAQ</a>
+        </div>
       </div>
     </div>
-    <header class="hero"><div class="wrap"><section class="hero-card"><div class="eyebrow">Новый Вектор — 2026</div><h1>Основное <span>меню</span></h1><p class="lead">Все разделы сайта в одном месте.</p></section></div></header>
-    <main class="wrap"><section class="menu-grid">
-  <a class="menu-card" href="program.html"><div class="icon">📅</div><h2>Программа</h2><p>До Вектора и все дни проекта.</p></a>
-  <a class="menu-card" href="materials.html"><div class="icon">📚</div><h2>Материалы</h2><p>Ссылки на папки Яндекс Диска: документы, фото, видео, шаблоны и проекты.</p></a>
-  <a class="menu-card" href="team.html"><div class="icon">👥</div><h2>Команда</h2><p>Управляющая команда, руководители округов, центры и службы.</p></a>
-  <a class="menu-card" href="map.html"><div class="icon">🗺️</div><h2>Карта территории</h2><p>Схема площадки и навигация.</p></a>
-  <a class="menu-card" href="media.html"><div class="icon">🎬</div><h2>Медиа</h2><p>Посты дня, фото, видео и переходы в соцсети.</p></a>
-  <a class="menu-card" href="faq.html"><div class="icon">❓</div><h2>FAQ</h2><p>Популярные вопросы и ответы.</p></a>
-</section></main>
-    
+
+    <!-- ============================================================ -->
+    <!-- 2. ШАПКА (ГЕРОЙ) – заголовок и описание страницы             -->
+    <!-- ============================================================ -->
+    <header class="hero">
+      <div class="wrap">
+        <section class="hero-card">
+          <div class="eyebrow">Новый Вектор — 2026</div>
+          <h1>Основное <span>меню</span></h1>
+          <p class="lead">Все разделы сайта в одном месте.</p>
+        </section>
+      </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- 3. ОСНОВНОЙ КОНТЕНТ – СЕТКА КАРТОЧЕК МЕНЮ                   -->
+    <!-- ============================================================ -->
+    <main class="wrap">
+      <section class="menu-grid">
+
+        <!-- ========== КАРТОЧКА 1: Программа ========== -->
+        <a class="menu-card" href="program.html">
+          <div class="icon">📅</div>
+          <h2>Программа</h2>
+          <p>До Вектора и все дни проекта.</p>
+        </a>
+
+        <!-- ========== КАРТОЧКА 2: Материалы ========== -->
+        <a class="menu-card" href="materials.html">
+          <div class="icon">📚</div>
+          <h2>Материалы</h2>
+          <p>Ссылки на папки Яндекс Диска: документы, фото, видео, шаблоны и проекты.</p>
+        </a>
+
+        <!-- ========== КАРТОЧКА 3: Команда ========== -->
+        <a class="menu-card" href="team.html">
+          <div class="icon">👥</div>
+          <h2>Команда</h2>
+          <p>Управляющая команда, руководители округов, центры и службы.</p>
+        </a>
+
+        <!-- ========== КАРТОЧКА 4: Карта территории ========== -->
+        <a class="menu-card" href="map.html">
+          <div class="icon">🗺️</div>
+          <h2>Карта территории</h2>
+          <p>Схема площадки и навигация.</p>
+        </a>
+
+        <!-- ========== КАРТОЧКА 5: Медиа ========== -->
+        <a class="menu-card" href="media.html">
+          <div class="icon">🎬</div>
+          <h2>Медиа</h2>
+          <p>Посты дня, фото, видео и переходы в соцсети.</p>
+        </a>
+
+        <!-- ========== КАРТОЧКА 6: FAQ ========== -->
+        <a class="menu-card" href="faq.html">
+          <div class="icon">❓</div>
+          <h2>FAQ</h2>
+          <p>Популярные вопросы и ответы.</p>
+        </a>
+
+        <!-- ----------------------------------------------------- -->
+        <!-- ↓↓↓ СЮДА ВСТАВЛЯЙТЕ НОВЫЕ КАРТОЧКИ, КОПИРУЯ БЛОК ВЫШЕ -->
+        <!-- ----------------------------------------------------- -->
+
+      </section>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- 4. ПОДВАЛ (одинаковый на всех страницах)                     -->
+    <!-- ============================================================ -->
     <footer class="footer">
       <div class="wrap footer-grid">
-        <div><strong>Новый Вектор 2026</strong><span>Движемся вперёд. Создаём будущее вместе!</span></div>
-        <div><strong>Экстренные контакты</strong><a href="#">Забота</a><br><a href="#">Медики</a><br><a href="#">Оргкомитет</a></div>
-        <div><strong>Службы</strong><a href="team-services.html">IT-служба</a><br><a href="team-services.html">Видеомедиа</a><br><a href="team-services.html">Служба заботы</a></div>
-        <div><strong>Связь</strong><a href="#">Почта проекта</a><br><a href="faq.html">FAQ</a><br><a href="map.html">Карта территории</a></div>
+        <div>
+          <strong>Новый Вектор 2026</strong>
+          <span>Движемся вперёд. Создаём будущее вместе!</span>
+        </div>
+        <div>
+          <strong>Экстренные контакты</strong>
+          <a href="#">Забота</a><br>
+          <a href="#">Медики</a><br>
+          <a href="#">Оргкомитет</a>
+        </div>
+        <div>
+          <strong>Службы</strong>
+          <a href="team-services.html">IT-служба</a><br>
+          <a href="team-services.html">Видеомедиа</a><br>
+          <a href="team-services.html">Служба заботы</a>
+        </div>
+        <div>
+          <strong>Связь</strong>
+          <a href="#">Почта проекта</a><br>
+          <a href="faq.html">FAQ</a><br>
+          <a href="map.html">Карта территории</a>
+        </div>
       </div>
     </footer>
-    
+
+    <!-- ============================================================ -->
+    <!-- 5. МОДАЛЬНОЕ ОКНО (для увеличения изображений)               -->
+    <!-- ============================================================ -->
     <div class="modal" id="modal" role="dialog" aria-modal="true">
       <div class="modal-inner">
         <button class="close" id="close" aria-label="Закрыть">×</button>
         <img id="modalImg" alt="">
       </div>
     </div>
+
+    <!-- ============================================================ -->
+    <!-- 6. ПОДКЛЮЧЕНИЕ СКРИПТОВ                                     -->
+    <!-- ============================================================ -->
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
+
   </body>
 </html>
