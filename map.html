@@ -1,1 +1,54 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Карта территории</title><link rel="stylesheet" href="css/style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark">Новый<br>Вектор<br>2026</span><span>Новый Вектор 2026</span></a><nav class="nav-links"><a data-nav href="index.html">Главная</a><a data-nav href="program.html">Программа</a><a data-nav href="materials.html">Материалы</a><a data-nav href="team.html">Команда</a><a data-nav href="map.html">Карта</a><a data-nav href="media.html">Медиа</a><a data-nav href="faq.html">FAQ</a></nav></div></header><main><section class="hero"><div class="container"><h1>Карта территории</h1><p class="lead">Пока схематичная карта. Позже сюда можно подключить интерактивные точки.</p><div class="panel"><div class="placeholder"><h3>Схема площадки</h3><p>Корпуса / жилые зоны • площадки мероприятий • столовая • медпункт • зоны активности • администрация • туалеты • парковка.</p></div></div></div></section></main><footer class="footer" data-footer></footer><script src="js/site.js"></script></body></html>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Карта территории</title>
+    <meta name="description" content="Официальный сайт проекта Новый Вектор 2026">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body >
+    
+    <div class="topbar">
+      <div class="wrap nav">
+        <a class="brand" href="index.html"><span class="brand-mark"></span><span>Новый<br>Вектор 2026</span></a>
+        <div class="navlinks"><a class="" href="index.html">Главная</a><a class="" href="today.html">Моё сегодня</a><a class="" href="menu.html">Меню</a><a class="" href="program.html">Программа</a><a class="" href="materials.html">Материалы</a><a class="" href="team.html">Команда</a><a class="active" href="map.html">Карта</a><a class="" href="media.html">Медиа</a><a class="" href="faq.html">FAQ</a></div>
+      </div>
+    </div>
+    <header class="hero"><div class="wrap"><section class="hero-card"><div class="eyebrow">Новый Вектор — 2026</div><h1>Карта <span>территории</span></h1><p class="lead">Схема площадки и навигация по ключевым точкам.</p></section></div></header>
+    <main class="wrap"><section class="map-box">
+  <div class="map-grid">
+    <div class="zone orange"><strong>Корпус / жилые зоны</strong><span>Место размещения участников.</span></div>
+    <div class="zone"><strong>Площадки мероприятий</strong><span>Аудитории, залы, точки сбора.</span></div>
+    <div class="zone orange"><strong>Столовая</strong><span>Питание и расписание приёмов пищи.</span></div>
+    <div class="zone"><strong>Медпункт</strong><span>Помощь и экстренная связь.</span></div>
+    <div class="zone orange"><strong>Зоны активности</strong><span>Спорт, отдых, вечерние события.</span></div>
+    <div class="zone"><strong>Администрация</strong><span>Оргкомитет и решение вопросов.</span></div>
+    <div class="zone"><strong>Туалеты</strong><span>Навигационные точки.</span></div>
+    <div class="zone orange"><strong>Парковка</strong><span>Транспорт и подъезд.</span></div>
+    <div class="zone"><strong>Точка встречи</strong><span>Общий сбор участников.</span></div>
+  </div>
+</section><div class="code-note">Раздел пока сделан как схематичная карта. Позже его можно заменить на изображение территории или интерактивную схему.</div></main>
+    
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div><strong>Новый Вектор 2026</strong><span>Движемся вперёд. Создаём будущее вместе!</span></div>
+        <div><strong>Экстренные контакты</strong><a href="#">Забота</a><br><a href="#">Медики</a><br><a href="#">Оргкомитет</a></div>
+        <div><strong>Службы</strong><a href="team-services.html">IT-служба</a><br><a href="team-services.html">Видеомедиа</a><br><a href="team-services.html">Служба заботы</a></div>
+        <div><strong>Связь</strong><a href="#">Почта проекта</a><br><a href="faq.html">FAQ</a><br><a href="map.html">Карта территории</a></div>
+      </div>
+    </footer>
+    
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <div class="modal-inner">
+        <button class="close" id="close" aria-label="Закрыть">×</button>
+        <img id="modalImg" alt="">
+      </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
