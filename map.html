@@ -11,123 +11,79 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- ====== ВЕРХНЯЯ ПАНЕЛЬ ====== -->
     <div class="topbar">
       <div class="wrap nav">
-        <a class="brand" href="index.html"><span class="brand-mark"></span><span>Новый<br>Вектор 2026</span></a>
-        <div class="navlinks"><a href="index.html">Главная</a><a href="today.html">Моё сегодня</a><a href="menu.html">Меню</a><a href="program.html">Программа</a><a href="materials.html">Материалы</a><a href="team.html">Команда</a><a class="active" href="map.html">Карта</a><a href="media.html">Медиа</a><a href="faq.html">FAQ</a></div>
+        <a class="brand" href="index.html">
+          <span class="brand-mark"></span>
+          <span>Новый<br>Вектор 2026</span>
+        </a>
+        <div class="navlinks">
+          <a href="index.html">Главная</a>
+          <a href="today.html">Моё сегодня</a>
+          <a href="menu.html">Меню</a>
+          <a href="program.html">Программа</a>
+          <a href="materials.html">Материалы</a>
+          <a href="team.html">Команда</a>
+          <a class="active" href="map.html">Карта</a>
+          <a href="media.html">Медиа</a>
+          <a href="faq.html">FAQ</a>
+        </div>
       </div>
     </div>
 
+    <!-- ====== ШАПКА ====== -->
     <header class="hero">
       <div class="wrap">
         <section class="hero-card">
           <div class="eyebrow">Новый Вектор — 2026</div>
           <h1>Карта <span>территории</span></h1>
-          <p class="lead">Нажмите на название точки под картой — нужное место подсветится на схеме.</p>
+          <p class="lead">Интерактивная схема с подробной информацией о всех объектах.</p>
         </section>
       </div>
     </header>
 
+    <!-- ====== ОСНОВНОЙ БЛОК ====== -->
     <main class="wrap">
-      <section class="interactive-map-section">
-        <div class="interactive-map-shell">
-          <div class="interactive-map" id="interactiveMap" aria-label="Интерактивная карта территории">
-            <img src="assets/territory-map-clean.jpg" alt="Карта территории Нового Вектора 2026">
-        <button class="map-marker" type="button" data-map-id="kpp1" style="left:46.344%; top:86.052%;" aria-label="КПП № 1">
-          <span>1</span>
-        </button>
-        <button class="map-marker" type="button" data-map-id="spa" style="left:44.634%; top:62.017%;" aria-label="Спа центр">
-          <span>2</span>
-        </button>
-        <button class="map-marker" type="button" data-map-id="cottage98" style="left:11.681%; top:52.79%;" aria-label="Коттедж 9/8">
-          <span>3</span>
-        </button>
-        <button class="map-marker" type="button" data-map-id="pavilion" style="left:2.659%; top:24.034%;" aria-label="Павильон">
-          <span>4</span>
-        </button>
-        <button class="map-marker" type="button" data-map-id="building1" style="left:80.342%; top:57.082%;" aria-label="Корпус 1">
-          <span>5</span>
-        </button>
-        <button class="map-marker" type="button" data-map-id="building2" style="left:72.84%; top:51.717%;" aria-label="Корпус 2">
-          <span>6</span>
-        </button>
-        <button class="map-marker" type="button" data-map-id="building3" style="left:66.857%; top:41.631%;" aria-label="Корпус 3">
-          <span>7</span>
-        </button>
-        <button class="map-marker" type="button" data-map-id="building4" style="left:63.628%; top:39.914%;" aria-label="Корпус 4">
-          <span>8</span>
-        </button>
-        <button class="map-marker" type="button" data-map-id="building5" style="left:77.303%; top:35.408%;" aria-label="Корпус 5">
-          <span>9</span>
-        </button>
-        <button class="map-marker" type="button" data-map-id="sport" style="left:87.939%; top:35.408%;" aria-label="Спортивная площадка">
-          <span>10</span>
-        </button>
-          </div>
-          <aside class="map-info" id="mapInfo">
-            <div class="eyebrow">Выбрана точка</div>
-            <h2>КПП № 1</h2>
-            <p>Основная точка входа и прохода на территорию.</p>
-            <span>Категория: Вход</span>
-          </aside>
-        </div>
-
-        <div class="map-places" aria-label="Список точек на карте">
-      <button class="map-place" type="button" data-map-target="kpp1">
-        <span class="place-dot">1</span>
-        <span><strong>КПП № 1</strong><em>Вход</em></span>
-      </button>
-      <button class="map-place" type="button" data-map-target="spa">
-        <span class="place-dot">2</span>
-        <span><strong>Спа центр</strong><em>Зона отдыха</em></span>
-      </button>
-      <button class="map-place" type="button" data-map-target="cottage98">
-        <span class="place-dot">3</span>
-        <span><strong>Коттедж 9/8</strong><em>Размещение</em></span>
-      </button>
-      <button class="map-place" type="button" data-map-target="pavilion">
-        <span class="place-dot">4</span>
-        <span><strong>Павильон</strong><em>Площадка</em></span>
-      </button>
-      <button class="map-place" type="button" data-map-target="building1">
-        <span class="place-dot">5</span>
-        <span><strong>Корпус 1</strong><em>Корпус</em></span>
-      </button>
-      <button class="map-place" type="button" data-map-target="building2">
-        <span class="place-dot">6</span>
-        <span><strong>Корпус 2</strong><em>Корпус</em></span>
-      </button>
-      <button class="map-place" type="button" data-map-target="building3">
-        <span class="place-dot">7</span>
-        <span><strong>Корпус 3</strong><em>Корпус</em></span>
-      </button>
-      <button class="map-place" type="button" data-map-target="building4">
-        <span class="place-dot">8</span>
-        <span><strong>Корпус 4</strong><em>Корпус</em></span>
-      </button>
-      <button class="map-place" type="button" data-map-target="building5">
-        <span class="place-dot">9</span>
-        <span><strong>Корпус 5</strong><em>Корпус</em></span>
-      </button>
-      <button class="map-place" type="button" data-map-target="sport">
-        <span class="place-dot">10</span>
-        <span><strong>Спортивная площадка</strong><em>Спорт</em></span>
-      </button>
-        </div>
-
-        <div class="code-note">На карте оставлены только утверждённые точки. Названия и описания можно менять прямо в файле <code>map.html</code>.</div>
-      </section>
+      <div style="display:flex; justify-content:center; padding:40px 0 60px;">
+        <a href="https://bekasovo.ru/spa-boarding-house/interactive-schema" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:24px; padding:20px 48px; border-radius:60px;">
+          🗺️ Открыть интерактивную карту
+        </a>
+      </div>
+      <div class="code-note">
+        Карта открывается в новой вкладке. Ссылка ведёт на официальную интерактивную схему <strong>Бекасово</strong>.
+      </div>
     </main>
 
+    <!-- ====== ПОДВАЛ ====== -->
     <footer class="footer">
       <div class="wrap footer-grid">
-        <div><strong>Новый Вектор 2026</strong><span>Движемся вперёд. Создаём будущее вместе!</span></div>
-        <div><strong>Экстренные контакты</strong><a href="#">Забота</a><br><a href="#">Медики</a><br><a href="#">Оргкомитет</a></div>
-        <div><strong>Службы</strong><a href="team-services.html">IT-служба</a><br><a href="team-services.html">Видеомедиа</a><br><a href="team-services.html">Служба заботы</a></div>
-        <div><strong>Связь</strong><a href="#">Почта проекта</a><br><a href="faq.html">FAQ</a><br><a href="map.html">Карта территории</a></div>
+        <div>
+          <strong>Новый Вектор 2026</strong>
+          <span>Движемся вперёд. Создаём будущее вместе!</span>
+        </div>
+        <div>
+          <strong>Экстренные контакты</strong>
+          <a href="#">Забота</a><br>
+          <a href="#">Медики</a><br>
+          <a href="#">Оргкомитет</a>
+        </div>
+        <div>
+          <strong>Службы</strong>
+          <a href="team-services.html">IT-служба</a><br>
+          <a href="team-services.html">Видеомедиа</a><br>
+          <a href="team-services.html">Служба заботы</a>
+        </div>
+        <div>
+          <strong>Связь</strong>
+          <a href="#">Почта проекта</a><br>
+          <a href="faq.html">FAQ</a><br>
+          <a href="map.html">Карта территории</a>
+        </div>
       </div>
     </footer>
 
+    <!-- ====== МОДАЛЬНОЕ ОКНО ====== -->
     <div class="modal" id="modal" role="dialog" aria-modal="true">
       <div class="modal-inner">
         <button class="close" id="close" aria-label="Закрыть">×</button>
@@ -137,43 +93,5 @@
 
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      const mapPoints = [
-        {id:'kpp1',label:'КПП № 1',category:'Вход',desc:'Основная точка входа и прохода на территорию.'},
-        {id:'spa',label:'Спа центр',category:'Зона отдыха',desc:'Спа центр на территории.'},
-        {id:'cottage98',label:'Коттедж 9/8',category:'Размещение',desc:'Коттедж 9/8.'},
-        {id:'pavilion',label:'Павильон',category:'Площадка',desc:'Павильон на территории.'},
-        {id:'building1',label:'Корпус 1',category:'Корпус',desc:'Корпус 1.'},
-        {id:'building2',label:'Корпус 2',category:'Корпус',desc:'Корпус 2.'},
-        {id:'building3',label:'Корпус 3',category:'Корпус',desc:'Корпус 3.'},
-        {id:'building4',label:'Корпус 4',category:'Корпус',desc:'Корпус 4.'},
-        {id:'building5',label:'Корпус 5',category:'Корпус',desc:'Корпус 5.'},
-        {id:'sport',label:'Спортивная площадка',category:'Спорт',desc:'Спортивная площадка.'}
-      ];
-
-      const info = document.getElementById('mapInfo');
-      const mapMarkers = Array.from(document.querySelectorAll('.map-marker'));
-      const mapButtons = Array.from(document.querySelectorAll('.map-place'));
-
-      function selectPoint(id) {
-        const point = mapPoints.find(item => item.id === id);
-        if (!point) return;
-
-        mapMarkers.forEach(marker => marker.classList.toggle('active', marker.dataset.mapId === id));
-        mapButtons.forEach(button => button.classList.toggle('active', button.dataset.mapTarget === id));
-
-        info.innerHTML = `
-          <div class="eyebrow">Выбрана точка</div>
-          <h2>${point.label}</h2>
-          <p>${point.desc}</p>
-          <span>Категория: ${point.category}</span>
-        `;
-      }
-
-      mapMarkers.forEach(marker => marker.addEventListener('click', () => selectPoint(marker.dataset.mapId)));
-      mapButtons.forEach(button => button.addEventListener('click', () => selectPoint(button.dataset.mapTarget)));
-
-      selectPoint('kpp1');
-    </script>
   </body>
 </html>
