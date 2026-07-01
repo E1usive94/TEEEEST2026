@@ -888,6 +888,194 @@ h1 span,
   font-weight: 650;
 }
 
+
+
+/* ============================================================ */
+/* 11.1. ИНТЕРАКТИВНАЯ КАРТА ТЕРРИТОРИИ                         */
+/* ============================================================ */
+/* Этот блок нужен для нового map.html:
+   карта + интерактивные маркеры + список точек под картой.
+   Старые стили .map-box/.map-grid/.zone можно оставить — они не мешают. */
+
+.interactive-map-section {
+  padding: 8px 0 64px;
+}
+
+.interactive-map-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.interactive-map {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: #06100d;
+  box-shadow: 0 24px 72px rgba(0, 0, 0, .42);
+}
+
+.interactive-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: saturate(1.08) contrast(1.06);
+}
+
+.map-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, .92);
+  background: linear-gradient(135deg, var(--orange), #ffd24d);
+  color: #06100d;
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 5px rgba(255, 138, 0, .18),
+    0 12px 30px rgba(0, 0, 0, .55);
+  transition: .2s ease;
+  z-index: 2;
+}
+
+.map-marker span {
+  display: block;
+  line-height: 27px;
+  text-align: center;
+}
+
+.map-marker:hover,
+.map-marker.active {
+  transform: translate(-50%, -50%) scale(1.36);
+  background: linear-gradient(135deg, #a7e34f, var(--orange));
+  box-shadow:
+    0 0 0 9px rgba(167, 227, 79, .24),
+    0 0 34px rgba(255, 138, 0, .72),
+    0 18px 40px rgba(0, 0, 0, .55);
+  z-index: 5;
+}
+
+.map-marker.active::after {
+  content: "";
+  position: absolute;
+  inset: -13px;
+  border-radius: 50%;
+  border: 2px solid rgba(167, 227, 79, .88);
+  animation: mapPulse 1.2s ease-out infinite;
+}
+
+@keyframes mapPulse {
+  from {
+    opacity: .95;
+    transform: scale(.82);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+.map-info {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(9, 35, 26, .90), rgba(2, 10, 8, .96));
+  box-shadow: 0 24px 72px rgba(0, 0, 0, .34);
+  min-height: 220px;
+}
+
+.map-info h2 {
+  margin: 12px 0 12px;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.map-info p {
+  color: var(--muted);
+  font-weight: 650;
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+
+.map-info span {
+  display: inline-flex;
+  border: 1px solid rgba(132, 220, 85, .28);
+  border-radius: 999px;
+  padding: 9px 12px;
+  color: var(--green2);
+  font-weight: 900;
+}
+
+.map-places {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 18px;
+}
+
+.map-place {
+  cursor: pointer;
+  border: 1px solid rgba(132, 220, 85, .24);
+  border-radius: 18px;
+  padding: 13px;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(9, 35, 26, .82), rgba(2, 10, 8, .94));
+  font-family: inherit;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: .2s ease;
+}
+
+.map-place:hover,
+.map-place.active {
+  transform: translateY(-2px);
+  border-color: rgba(255, 138, 0, .72);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .24);
+}
+
+.place-dot {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #06100d;
+  background: linear-gradient(135deg, var(--orange), #ffd24d);
+  font-weight: 900;
+}
+
+.map-place.active .place-dot {
+  background: linear-gradient(135deg, #a7e34f, var(--orange));
+}
+
+.map-place strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.map-place em {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
 /* ============================================================ */
 /* 12. МЕДИА-ПОСТЫ                                             */
 /* ============================================================ */
@@ -1164,3 +1352,42 @@ code {
     gap: 4px;
   }
 }
+
+
+/* ============================================================ */
+/* 16.1. АДАПТИВНОСТЬ ДЛЯ ИНТЕРАКТИВНОЙ КАРТЫ                   */
+/* ============================================================ */
+@media (max-width: 980px) {
+  .interactive-map-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .map-places {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .map-marker {
+    width: 30px;
+    height: 30px;
+  }
+
+  .map-marker span {
+    line-height: 23px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 520px) {
+  .map-places {
+    grid-template-columns: 1fr;
+  }
+
+  .interactive-map {
+    overflow-x: auto;
+  }
+
+  .interactive-map img {
+    min-width: 760px;
+  }
+}
+
