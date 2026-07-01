@@ -9,6 +9,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- ========== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ БЛОКИРОВКИ ========== -->
+    <style>
+      /* Блокируем неактивные карточки дней */
+      .tile.disabled {
+        pointer-events: none;   /* отключаем клики и наведение */
+        opacity: 0.4;           /* делаем полупрозрачными */
+        cursor: default;        /* убираем указатель-руку */
+        filter: grayscale(0.3); /* лёгкое обесцвечивание для наглядности */
+        transition: opacity 0.2s ease;
+      }
+      /* Дополнительно можно убрать подчёркивание и эффекты */
+      .tile.disabled:hover {
+        opacity: 0.4;           /* без изменений при наведении */
+        transform: none;        /* отключаем анимации, если они есть */
+      }
+    </style>
   </head>
   <body>
 
@@ -52,37 +69,40 @@
     <!-- ========== ОСНОВНОЙ КОНТЕНТ ========== -->
     <main class="wrap">
       <section class="tile-grid four">
+        <!-- День 1 – активный (кликабельный) -->
         <a class="tile compact" href="day1.html">
           <div class="num"></div>
           <h2>День 1</h2>
           <p>День заезда (добро пожаловать!)</p>
         </a>
-        <a class="tile compact" href="day2.html">
+
+        <!-- Дни 2–7 – заблокированы (класс disabled) -->
+        <a class="tile compact disabled" href="day2.html">
           <div class="num"></div>
           <h2>День 2</h2>
           <p>День Профсоюза</p>
         </a>
-        <a class="tile compact" href="day3.html">
+        <a class="tile compact disabled" href="day3.html">
           <div class="num"></div>
           <h2>День 3</h2>
           <p>Сообщество и лидерство</p>
         </a>
-        <a class="tile compact" href="day4.html">
+        <a class="tile compact disabled" href="day4.html">
           <div class="num"></div>
           <h2>День 4</h2>
           <p>Молодёжь и профессиональные клубы</p>
         </a>
-        <a class="tile compact" href="day5.html">
+        <a class="tile compact disabled" href="day5.html">
           <div class="num"></div>
           <h2>День 5</h2>
           <p>Обмен опытом и фестиваль</p>
         </a>
-        <a class="tile compact" href="day6.html">
+        <a class="tile compact disabled" href="day6.html">
           <div class="num"></div>
           <h2>День 6</h2>
           <p>Управление и стратегия</p>
         </a>
-        <a class="tile compact" href="day7.html">
+        <a class="tile compact disabled" href="day7.html">
           <div class="num"></div>
           <h2>День 7</h2>
           <p>Итоги и защита проектов</p>
