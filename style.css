@@ -148,7 +148,7 @@ a {
 /* ============================================================ */
 .splash {
   min-height: 100vh;
-  background: linear-gradient(180deg, rgba(1, 2, 2, .35), rgba(1, 4, 3, .72)), url('assets/brand/main-hero.jpeg') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(1, 2, 2, .35), rgba(1, 4, 3, .72)), url('assets/12.png') center/cover no-repeat;
   display: flex;
   align-items: stretch;
 }
